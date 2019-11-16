@@ -52,8 +52,19 @@
             <label for="password">Password:</label>
             <input type="password" name="password" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Create User</button>
+        <button type="submit" class="btn btn-primary col-sm-3">Create User</button>
     </form>
+
+    <form method="post" action="{{route('admin.users.destroy', $user->id)}}">
+    {{csrf_field()}} <!-- This makes a token for the form -->
+
+        <input type="hidden" name="_method" value="DELETE">
+
+        <div class="form-group">
+            <button class="btn btn-danger col-sm-3" style="margin-left: 5px">Delete User</button>
+        </div>
+    </form>
+
     <br>
 </div>
 </div>
