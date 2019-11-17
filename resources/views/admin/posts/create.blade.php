@@ -15,8 +15,11 @@
             <label for="category_id">Category:</label>
             <select class="form-control" id="category_id" name="category_id">
                 <option value="">Choose Option</option>
-                <option value="1">PHP</option>
-                <option value="0">Javascript</option>
+                @foreach($categories as $id => $category)
+                    <option value="{{$id}}">{{$category}}</option>
+                @endforeach
+
+
 {{--                @foreach($roles as $id => $role)--}}
 {{--                    <option value="{{$id}}">{{$role}}</option>--}}
 {{--                @endforeach--}}
