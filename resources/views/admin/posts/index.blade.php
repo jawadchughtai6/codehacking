@@ -3,7 +3,14 @@
 
 @section('content')
 
+
     <h1>Posts</h1>
+
+    @if(Session::has('deleted_post'))
+
+        <p class="alert alert-danger">{{session('deleted_post')}}</p>
+
+    @endif
 
     <table class="table">
         <thead>
@@ -26,10 +33,10 @@
                 <img>
                     <td>{{$post->id}}</td>
                     <td><img height="50" src="{{$post->photo_id? $post->photo->file : 'http://placehold.it/400x400'}}"></td>
-                    <td>{{$post->user->name}}</td>
+                    <td><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->user->name}}</a></td>
                     <td>{{$post->category ? $post->category->name : 'Uncategorized'}}</td>
-                    <td><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->title}}</a></td>
-                    <td>{{$post->body}}</td>
+                    <td>{{$post->title}}</td>
+                    <td>{{str_limit($post->body,30)}}</td>
                     <td>{{$post->created_at->diffForHumans()}}</td>
                     <td>{{$post->updated_at->diffForHumans()}}</td>
                 </tr>
