@@ -103,6 +103,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\codehacking\resources\views\admin" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -138,7 +143,8 @@
       <workItem from="1573712203741" duration="7930000" />
       <workItem from="1573737090506" duration="4090000" />
       <workItem from="1573887385861" duration="22113000" />
-      <workItem from="1573971347836" duration="22924000" />
+      <workItem from="1573971347836" duration="24378000" />
+      <workItem from="1574056488403" duration="12372000" />
     </task>
     <servers />
   </component>
