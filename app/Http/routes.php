@@ -19,6 +19,11 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
+//home.post is used so that when we need to submit a form we can use
+//route('home.post') instead of writing the whole path like action='/post/$post->id.
+//Route::get('/post/{id}', 'AdminPostsController@post');
+
 Route::group(['middleware'=>'admin'], function(){
 
     Route::resource('admin/users', 'AdminUsersController');
@@ -26,7 +31,16 @@ Route::group(['middleware'=>'admin'], function(){
     Route::resource('admin/categories', 'AdminCategoriesController');
     Route::resource('admin/media', 'AdminMediasController');
 
+    Route::resource('admin/comments', 'PostCommentController');
+    Route::resource('admin/comment/replies', 'CommentRepliesController');
+
 });
+
+//This will give access just to the user logged in
+//Route::group(['middleware'=>'auth'], function(){
+//    Route::resource('admin/comments', 'PostCommentController');
+//    Route::post('admin/comment/replies', 'CommentRepliesController');
+//});
 
 Route::get('/admin', function(){
    return view('admin.index');

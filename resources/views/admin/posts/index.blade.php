@@ -30,7 +30,6 @@
         @if($posts)
 
             @foreach($posts as $post)
-                <img>
                     <td>{{$post->id}}</td>
                     <td><img height="50" src="{{$post->photo_id? $post->photo->file : 'http://placehold.it/400x400'}}"></td>
                     <td><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->user->name}}</a></td>
@@ -39,6 +38,8 @@
                     <td>{{str_limit($post->body,30)}}</td>
                     <td>{{$post->created_at->diffForHumans()}}</td>
                     <td>{{$post->updated_at->diffForHumans()}}</td>
+                    <td><a href="{{route('home.post', $post->slug)}}">View Post</a> </td>
+                    <td><a href="{{route('admin.comments.show', $post->id)}}">View Comments</a> </td>
                 </tr>
             @endforeach
 
@@ -47,5 +48,11 @@
 
         </tbody>
     </table>
+
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">
+            {{$posts->render()}}
+        </div>
+    </div>
 
 @stop

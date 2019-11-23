@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8867bec8-eea5-4d8d-9b60-f5f4090506e3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="XSLT Stylesheet" />
         <option value="blade" />
       </list>
     </option>
@@ -87,6 +91,14 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-sluggable" />
     </include_path>
   </component>
   <component name="ProjectId" id="1TQAm7WDH9txSF6gZdj3C9vF6Og" />
@@ -144,7 +156,11 @@
       <workItem from="1573737090506" duration="4090000" />
       <workItem from="1573887385861" duration="22113000" />
       <workItem from="1573971347836" duration="24378000" />
-      <workItem from="1574056488403" duration="12372000" />
+      <workItem from="1574056488403" duration="20008000" />
+      <workItem from="1574142469955" duration="28864000" />
+      <workItem from="1574229587715" duration="20560000" />
+      <workItem from="1574315990312" duration="7101000" />
+      <workItem from="1574490967222" duration="13411000" />
     </task>
     <servers />
   </component>
